@@ -1,4 +1,4 @@
-package com.example.testing
+package com.example.shpping_list
 
 import org.junit.Test
 
