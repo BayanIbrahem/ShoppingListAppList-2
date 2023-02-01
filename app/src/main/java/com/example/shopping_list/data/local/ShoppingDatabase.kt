@@ -1,10 +1,10 @@
-package com.example.shpping_list.data.local
+package com.example.shopping_list.data.local
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.shpping_list.data.local.entity.ShoppingItem
+import com.example.shopping_list.data.local.entity.ShoppingItem
 
 @Database(
     entities = [ShoppingItem::class],

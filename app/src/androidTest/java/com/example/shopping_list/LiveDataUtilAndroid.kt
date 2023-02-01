@@ -1,4 +1,4 @@
-package com.example.shpping_list
+package com.example.shopping_list
 /*
  * Copyright (C) 2019 The Android Open Source Project
  *

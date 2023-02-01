@@ -1,4 +1,4 @@
-package com.example.shpping_list.data.local
+package com.example.shopping_list.data.local
 
 import android.util.Log
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
@@ -6,16 +6,16 @@ import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SmallTest
-import com.example.shpping_list.data.local.entity.ShoppingItem
-import com.example.shpping_list.getOrAwaitValue
+import com.example.shopping_list.data.local.entity.ShoppingItem
+import com.example.shopping_list.getOrAwaitValue
 import com.google.common.truth.Truth.assertThat
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
 import org.junit.After
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import java.lang.Double
 import java.util.concurrent.Executors
 
 @RunWith(AndroidJUnit4::class)
@@ -47,6 +47,7 @@ class ShoppingDaoTest {
         db.close()
     }
 
+    @OptIn(ExperimentalCoroutinesApi::class)
     @Test
     fun insertShoppingItem() = runTest { // it is runBlocking for test.
         val item = ShoppingItem(name = "item_name", amount = 5, unitPrice = 2.0, imageUrl = "image_url", id = 1)
